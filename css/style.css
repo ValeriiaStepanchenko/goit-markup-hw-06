@@ -620,6 +620,36 @@ b{
 .footer-list-item.linkedin:hover{
     background-color:var(--hover-color);
 }
+.footer-subscribe-div{
+    margin-left: 94px;
+}
+.footer-subscribe-form{
+    margin-top: 20px;
+}
+.footer-subscribe-form input[type=email]{
+    width: 358px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    margin-right: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: transparent;
+}
+.footer-btn-subscribe{
+    width: 200px;
+    height: 50px;
+    color: #FFFFFF;
+    background-color: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+}
 
                             /* PORTFOLIO PAGE */
 /* MAIN */
