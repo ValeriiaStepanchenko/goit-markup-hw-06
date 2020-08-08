@@ -70,6 +70,9 @@ input{
 button{
     outline: none;
 }
+textarea{
+    resize: none;
+}
 
                     /* HEADER */
 .link{
@@ -231,8 +234,11 @@ ul .header-tel:focus{
     text-transform: uppercase;
     color: var(--hero-main-color); 
 }
-.hero-button{
-    min-width: 200px;
+/* КНОПКА */
+
+.hero-button,
+.contact-form-button{
+    width: 200px;
     height: 50px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: 1px solid transparent;
@@ -241,10 +247,121 @@ ul .header-tel:focus{
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-    background-color: #2196F3;
+    background-color: var(--hover-color);
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--hero-main-color);
+    margin-left: auto;
+    margin-right: auto;
+}
+.backdrop.is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+.backdrop{
+    position: fixed;
+    display: flex;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.contact-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    flex-direction: column;
+    width: 528px;
+    padding: 40px;
+
+    background-color: var(--hero-main-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.contact-form-title{
+    font-style: normal;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 30px;
+}
+.contact-form-div{
+    position: relative;
+    margin-bottom: 28px;
+}
+.contact-form-input,
+.message-form-textarea{
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+.contact-form-label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding-left: 42px;
+}
+.message-form-div{
+    position: relative;
+    margin-bottom: 28px;
+}
+.message-form-textarea{
+    height: 120px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+.message-form-label{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    transform: translateY(-10%);
+    padding-left: 16px;
+}
+.contact-form-checkbox{
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+.contact-form-checkbox-span-link{
+    text-decoration: underline;
+    color: #2196F3;
 }
 /* FEATURES */
 section .container{
