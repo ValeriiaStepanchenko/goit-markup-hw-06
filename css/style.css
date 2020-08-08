@@ -63,6 +63,14 @@ ul{
 img{
     display: block;
 }
+input{
+    outline: none;
+}
+
+button{
+    outline: none;
+}
+
                     /* HEADER */
 .link{
     display: block;
@@ -636,9 +644,10 @@ b{
     box-sizing: border-box;
     border-radius: 4px;
     background-color: transparent;
+    color: var(--logo-footer-color);
 }
 .footer-btn-subscribe{
-    width: 200px;
+    min-width: 200px;
     height: 50px;
     color: #FFFFFF;
     background-color: #2196F3;
@@ -649,6 +658,21 @@ b{
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
+    /* text-align: center; */
+}
+.footer-btn-text,
+.footer-btn-svg{
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.footer-btn-svg{
+    width: 24px;
+    height: 24px;
+    fill: var(--logo-footer-color);
+    margin-left: 10px;
+
+    
 }
 
                             /* PORTFOLIO PAGE */
