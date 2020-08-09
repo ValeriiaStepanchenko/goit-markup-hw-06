@@ -56,28 +56,47 @@
               <div class="backdrop is-hidden" data-modal>
                 <form action="#" class="contact-form">
                   <h2 class="contact-form-title">Оставьте свои данные, мы вам перезвоним</h2>
-
+                  <button data-modal-close class="modal-close-button" type="button">
+                    <svg class="modal-close-button-icon">
+                      <use href="./images/sprite.svg#icon-close-button"></use>
+                    </svg>
+                  </button>
                     <div class="contact-form-div">
-                      <input class="contact-form-input" name="user-name" id="name" type="text" placeholder=" ">
+                      <input class="contact-form-input" name="user-name" id="name" type="text" placeholder=" " required>
                     <label for="name" class="contact-form-label">Имя</label>
+                    <svg class="contact-form-icon">
+                      <use href="./images/sprite.svg#icon-modal-name"></use>
+                    </svg>
                     </div>
 
                     <div class="contact-form-div">
-                      <input class="contact-form-input" type="tel" name="user-telephone" id="tel" placeholder=" ">
+                      <input class="contact-form-input" type="tel" name="user-telephone" id="tel" placeholder=" " required>
                   <label for="tel" class="contact-form-label">Телефон</label>
+                  <svg class="contact-form-icon">
+                    <use href="./images/sprite.svg#icon-modal-phone"></use>
+                  </svg>
                     </div>
+
                     <div class="contact-form-div">
-                      <input class="contact-form-input" type="email" name="user-email" id="email" placeholder=" ">
+                      <input class="contact-form-input" type="email" name="user-email" id="email" placeholder=" " required>
                   <label for="email" class="contact-form-label">Почта</label>
+                  <svg class="contact-form-icon">
+                    <use href="./images/sprite.svg#icon-modal-mail"></use>
+                  </svg>
                     </div>
                   
                   <div class="message-form-div">
-                    <textarea class="message-form-textarea" name="user-message" id="message"></textarea>
+                    <textarea class="message-form-textarea" name="user-message" id="message" placeholder=" "></textarea>
                   <label for="message" class="message-form-label">Комментарий</label>
                   </div>
 
-                    <label class="">
+                    <label class="checkbox-form-label">
                       <input type="checkbox" class="contact-form-checkbox" name="policy" value="accept-policy">
+                      <span class="contact-form-custom-checkbox">
+                        <svg class="contact-form-custom-checkbo-icon">
+                          <use href="./images/sprite.svg#icon-vector"></use>
+                        </svg>
+                      </span>
                     <span class="contact-form-checkbox-span">
                       Соглашаюсь с рассылкой и принимаю <a class="contact-form-checkbox-span-link" href="http://" target="_blank" rel="noopener noreferrer">Условия договора</a>
                     </span>

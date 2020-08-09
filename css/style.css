@@ -240,7 +240,7 @@ ul .header-tel:focus{
 .contact-form-button{
     width: 200px;
     height: 50px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   
     border: 1px solid transparent;
     border-radius: 4px;
     font-style: 400;
@@ -253,6 +253,13 @@ ul .header-tel:focus{
     color: var(--hero-main-color);
     margin-left: auto;
     margin-right: auto;
+}
+.hero-button:hover,
+.contact-form-button:hover,
+.hero-button:focus,
+.contact-form-button:focus{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 .backdrop.is-hidden{
     visibility: hidden;
@@ -273,6 +280,7 @@ ul .header-tel:focus{
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form{
     position: absolute;
@@ -300,6 +308,36 @@ ul .header-tel:focus{
     color: #212121;
     margin-bottom: 30px;
 }
+.modal-close-button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: pointer;
+    padding:0;
+}
+.modal-close-button:hover,
+.modal-close-button:focus{
+    fill: var(--hover-color);
+}
+.modal-close-button-icon{
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    padding: 6px;
+}
+
+
+
+
 .contact-form-div{
     position: relative;
     margin-bottom: 28px;
@@ -320,6 +358,7 @@ ul .header-tel:focus{
     line-height: 1.14;
     letter-spacing: 0.01em;
     color: #757575;
+    padding-left: 42px;
 }
 .contact-form-label{
     position: absolute;
@@ -327,6 +366,25 @@ ul .header-tel:focus{
     left: 0;
     transform: translateY(-50%);
     padding-left: 42px;
+    transition: transform 250ms linear;
+}
+.contact-form-input:focus + .contact-form-label,
+.contact-form-input:not(:placeholder-shown) + .contact-form-label{
+    transform: translate(-20px,-40px);
+    color: var(--hover-color);
+    font-size: 12px;
+}
+.contact-form-input:focus ~ .contact-form-icon{
+    fill: var(--hover-color);
+}
+
+.contact-form-icon{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
 }
 .message-form-div{
     position: relative;
@@ -346,18 +404,62 @@ ul .header-tel:focus{
     left: 0;
     transform: translateY(-10%);
     padding-left: 16px;
+    transition: transform 250ms linear;
+}
+.message-form-textarea:focus + .message-form-label,
+.message-form-textarea:not(:placeholder-shown) + .message-form-label{
+    transform: translate(-10px,-30px);
+    color: var(--hover-color);
+    font-size: 12px;
+}
+.contact-form-input:focus,
+.message-form-textarea:focus,
+.contact-form-input:hover,
+.message-form-textarea:hover,
+.contact-form-input:not(:placeholder-shown),
+.message-form-textarea:not(:placeholder-shown){
+    outline: none;
+    border-color: var(--hover-color);
+    cursor: pointer;
+}
+
+
+.checkbox-form-label{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-left: 52px;
 }
 .contact-form-checkbox{
-    margin-bottom: 30px;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.contact-form-custom-checkbox{
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 1px solid #212121;
+    border-radius: 2px;
+}
+.contact-form-custom-checkbo-icon{
+    width: 100%;
+    height: 100%;
+    fill: var(--hero-main-color);
+}
+.contact-form-checkbox:checked + .contact-form-custom-checkbox{
+    background-color: var(--hover-color);
+    border: transparent;
 }
 
-
-
-
-
-
-
-
+.contact-form-checkbox-span{
+    margin-left: 9px;
+}
 
 .contact-form-checkbox-span-link{
     text-decoration: underline;
