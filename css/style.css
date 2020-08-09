@@ -433,10 +433,11 @@ ul .header-tel:focus{
 
 .checkbox-form-label{
     display: flex;
-    /* align-items: center; */
+    align-items: center;
+   
     
     margin-bottom: 30px;
-    /* padding-left: 52px; */
+
 }
 .contact-form-checkbox{
     position: absolute;
